@@ -79,7 +79,7 @@ public class Q3 {
 	}
 	
 	//判斷數字能不能選
-	public static boolean canChoose(int num, String input) {
+	public boolean canChoose(int num, String input) {
 		//將要比對的數字轉成 String
 		String s = Integer.toString(num);
 		//含有不想選的數字在內會是 true 為符合功能名所以取反以 false 代表不能選
@@ -87,7 +87,7 @@ public class Q3 {
 	}
 	
 	//判斷數字是否重複
-	public static boolean isRepeat(int[] array, int num, int count) {
+	public boolean isRepeat(int[] array, int num, int count) {
 		//比對和目前在內所有的元素是否重複
 		for(int i = 0; i < count; i++) {
 			if(array[i] == num) {
