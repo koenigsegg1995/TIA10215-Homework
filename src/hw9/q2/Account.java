@@ -1,17 +1,34 @@
 package hw9.q2;
 
+/**
+ * 帳號
+ */
 public class Account {
-	
-	public int deposit = 0; //預設存款為 0
-	
-	public synchronized void transfer(String name, int amount) { //匯款
-		deposit += amount;
-		System.out.println(name + "匯了" + amount + "，帳戶共有：" + deposit);
-	}
 
-	public synchronized void withDraw(String name, int amount) { //領錢
-		deposit += amount;
-		System.out.println(name + "領了" + -amount + "，帳戶共有：" + deposit);
-	}
-	
+    /**
+     * 帳號名
+     */
+    private String accountName;
+
+    /**
+     * 存款
+     */
+    private Integer deposit;
+
+    public String getAccountName() {
+        return accountName;
+    }
+
+    public void setAccountName(String accountName) {
+        this.accountName = accountName;
+    }
+
+    public Integer getDeposit() {
+        return deposit;
+    }
+
+    public void setDeposit(Integer deposit) {
+        this.deposit = deposit;
+    }
+
 }
